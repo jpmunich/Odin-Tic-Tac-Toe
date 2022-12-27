@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: rgba(255, 70, 70, 0.5);
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(255, 106, 106);
+}
+
+#gameboard-container {
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 100px;
+    height: 450px;
+    width: 450px;
+    background-color: rgb(134, 44, 44);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gameboard-tile {
+    height: 150px;
+    width: 150px;
+    background-color: rgb(170, 60, 60);
+    border: 2px solid black;
+}
+
+#player-turn-label {
+    font-size: 20px;
+    font-weight: 700;
+}
