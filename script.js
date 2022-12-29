@@ -1,5 +1,6 @@
 const gameboardContainer = document.getElementById("gameboard-container");
 const playerTurnLabel = document.getElementById("player-turn-label");
+const gameBoardTiles = document.getElementsByClassName("gameboard-tile");
 
 const gameboard = () => {
     let theGameboard = [];
@@ -25,4 +26,14 @@ const gameFlow = () => {
 const mainGameboard = gameboard();
 mainGameboard.create();
 
-playerTurnLabel.innerText = "Player ";
+for (let i = 0; i < mainGameboard.theGameboard.length; i++) {
+    gameBoardTiles[i].addEventListener("mouseover", () => {
+        gameBoardTiles[i].classList.add("hover");
+    })
+    gameBoardTiles[i].addEventListener("mouseout", () => {
+        gameBoardTiles[i].classList.remove("hover");
+    })
+    gameBoardTiles[i].addEventListener("click", () => {
+        gameBoardTiles[i].classList.add("filled-tile");
+    })
+}
